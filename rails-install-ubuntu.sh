@@ -16,8 +16,8 @@ echo "Install packages. Enter your password when asked."
 sudo apt-get --ignore-missing install build-essential git-core curl openssl libssl-dev libcurl4-openssl-dev zlib1g zlib1g-dev libreadline6-dev libyaml-dev libsqlite3-dev libsqlite3-0 sqlite3 libxml2-dev libxslt1-dev libffi-dev software-properties-common libgdm-dev libncurses5-dev automake autoconf libtool bison postgresql postgresql-contrib libpq-dev libc6-dev -y
 
 echo "Install Node.js"
-sudo apt-get install -y snapd
-sudo snap install node --classic --channel=18
+curl -fsSL https://deb.nodesource.com/setup_23.x | sudo bash -
+sudo apt-get install -y nodejs
 
 echo "Install ImageMagick for image processing"
 sudo apt-get install imagemagick --fix-missing -y
