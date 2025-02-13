@@ -45,7 +45,7 @@ echo "Load rbenv config in install script"
 eval "$($HOME/.rbenv/bin/rbenv init - bash)"
 
 echo "Install Ruby"
-RUBY_VERSION=3.1.3
+RUBY_VERSION=3.4.1
 rbenv install "$RUBY_VERSION"
 rbenv global "$RUBY_VERSION"
 
@@ -56,11 +56,11 @@ gem install bundler rails
 echo -e "\n- - - - - -\n"
 echo -e "Now we are going to print some information to check that everything is done:\n"
 
-echo -n "Should be SQLite 3.22.0 or higher: sqlite "
+echo -n "Should be SQLite 3.45.1 or higher: sqlite "
 sqlite3 --version
-echo -n "Should be Ruby 3.1.3 or higher:                "
+echo -n "Should be Ruby $RUBY_VERSION or higher:     "
 ruby -v | cut -d " " -f 2
-echo -n "Should be Rails 7.0 or higher:         "
+echo -n "Should be Rails 8.0 or higher:      "
 rails -v
 echo -e "\n- - - - - -\n"
 
